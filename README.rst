@@ -10,7 +10,7 @@ Menu Maker is a menu generator for python code that runs in the shell.
 
 
 * Github - https://github.com/Agentnumber47/menu_maker
-* PyPi - https://pypi.org/project/menu_maker/
+* PyPi - https://pypi.org/project/menu-maker/
 
 Contents
 --------
@@ -20,7 +20,7 @@ Installation
 ------------
 Menu Maker can be copied from source (at the GitHub link), or through pip::
 
-    pip install menu_maker
+    pip install menu-maker
 
 Using the library
 -----------------
