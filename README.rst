@@ -9,9 +9,8 @@ Menu Maker is a menu generator for python code that runs in the shell.
     :alt: Example
 
 
-CHANGE:
-* Github - https://github.com/tartley/colorama
-* PyPi -
+* Github - https://github.com/Agentnumber47/menu_maker
+* PyPi - https://test.pypi.org/project/menu_maker/
 
 Contents
 --------
