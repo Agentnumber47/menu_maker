@@ -75,7 +75,7 @@ Here's a working example of how to build and deploy a functional program with a 
   if __name__ == '__main__':
       main()
 
-If something is not working with the menu you made, troubleshoot by enabling one of the debug modes::
+If something is not working with the menu you made, troubleshoot by enabling one of the debug modes.
 
 .. code-block:: python
 
