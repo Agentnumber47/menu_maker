@@ -479,7 +479,7 @@ I make a lot of menus and so this was mainly to speed up my own work. This is my
 Menu Maker will forever be FOSS, but consider throwing me a literal buck or two here: https://www.buymeacoffee.com/agentnumber47
 If you wish to see what else I might be working on: https://github.com/Agentnumber47
 
-Suggestions and feedback is welcome, and you're pretty much free to do what you like with the code, but I'm not seeking any contributors.
+Suggestions and feedback are welcome, and you're pretty much free to do what you like with the code, but I'm not seeking any contributors.
 
 BORING AND TECHNICAL
 ====================
