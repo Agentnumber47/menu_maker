@@ -130,7 +130,7 @@ class Menu:
         if not debug or debug.lower() == "crash":
             journal = False
         elif debug.lower() == "log" or debug.lower() == "mixed":
-            logging.basicConfig(filename='./menuerator.log',level=logging.INFO)
+            logging.basicConfig(filename='./menu-maker.log',level=logging.INFO)
             time = time_thing()
             logging.info(f'{time}: Initializing...\n')
             journal = True
