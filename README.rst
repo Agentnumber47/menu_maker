@@ -18,7 +18,7 @@ Contents
 
 Installation
 ------------
-Menu Maker can be copied from source (at the GitHub link), or through pip::
+Menu Maker can be copied from source (at the GitHub link), or installed through pip::
 
     pip install menu-maker
 
@@ -75,7 +75,7 @@ Here's a working example of how to build and deploy a functional program with a 
   if __name__ == '__main__':
       main()
 
-If something is not working with the menu you made, troubleshoot by enabling one of the debug modes::
+If something is not working with the menu you made, troubleshoot by enabling one of the debug modes.
 
 .. code-block:: python
 
@@ -119,11 +119,11 @@ As always, import the library into your code.
 
 There are only 3 elements that must be included in each implementation. In order:
 
-1. You need to declare something as a menu. Name it anything. ``anything = maker.Menu()``
-2. You need to offer a selection. ``anything.selection("Selection", selectation)``
+1. You need to declare a menu. Name it anything. ``anything = maker.Menu()``
+2. You need to offer a selection. ``anything.selection("Selection", selection_function)``
 3. You need to run the menu. ``anything.deploy()``
 
-That's the minimum to run a program (as long as the option directs to a valid function). What's left is the information you want to present and how you want to present it.
+That's the minimum to run a program (as long as the selection directs to a valid function). What's left is the information you want to present and how you want to present it.
 
 2. The Components...
 --------------------
@@ -133,7 +133,7 @@ The library breaks down a menu screen line by line. By default it will take care
 ``menu_object.heading(text)``
 .........................
 
-The first component is the heading. The heading is basically a line with text in the center, surrounded by (optionally) whitespace, then a repeating character to go to the edge of the field of display. It's symmetrical and pretty, and breaks up what you're looking at.
+The first component is the ``heading``. The ``heading`` is basically a line with text in the center, surrounded by (optionally) whitespace, then a repeating character to go to the edge of the field of display. It's symmetrical and pretty, and breaks up what you're looking at.
 
 .. code-block:: python
 
@@ -146,7 +146,7 @@ The first component is the heading. The heading is basically a line with text in
 ``menu_object.repeat("*")``
 .......................
 
-``.repeat`` is simply a modified heading. It's the repeating character(s) minus the text and whitespace.
+``.repeat`` is simply a modified ``heading``. It's the repeating character(s) minus the text and whitespace.
 
 .. code-block:: python
 
@@ -262,6 +262,10 @@ Optional Arguments
 
 * Purpose: The label for the selection to exit the program.
 
+``filler = " "``
+,,,,,,,,,,,,,,
+* Purpose: The default filler when you want something to be blank.
+
 ``flanks=("[", "]")``
 ,,,,,,,,,,,,,,,,,,,,,
 
@@ -290,9 +294,9 @@ Ex. Using the default settings would produce "[1]".
     1. "num"  | Index sequentially by number. (Ex. 1, 2, 3...)
     2. "char" | Index sequentially by character. (Ex. A, B, C...)
     3. "yn"   | Index "Yes" and "No". Requires 2 selections exactly ("Yes" first).
-              | (Y or 1) and (N or 0) both work to execute functions.
+              | Additionally, (Y or 1) and (N or 0) both work to execute functions.
     4. "bool" | Index "True" and "False". Requires 2 selections exactly ("True" first).
-              | (T or 1) and (F or 0) both work to execute functions.
+              | Additionally, (T or 1) and (F or 0) both work to execute functions.
 
 ``selection_style="enclosed"``
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -370,6 +374,16 @@ Optional Arguments
     1. False
     2. True
 
+``no_close_gap=False``
+,,,,,,,,,,,,,,,,
+* Purpose: When off (``False``), the program will automatically add a blank line between your last option and the close program option.
+
+* Choices::
+
+    1. False
+    2. True
+
+
 ``x_field=False``
 ,,,,,,,,,,,,,,
 * Purpose: Specify the amount of characters to format the menu within. Will query the terminal display size by default.
@@ -406,7 +420,7 @@ Optional Arguments
 
 **NOTE** Using too many characters will cause a bug in the formatting.
 
-``x_white=int``
+``x_white=3``
 ,,,,,,,,,,,,,,,
 * Purpose: Amount of whitespace (quantified in characters) between the ``heading`` ``text`` and the border/repeating character.
 
@@ -420,6 +434,9 @@ Optional Arguments
 
 Optional Arguments
 ...................
+``filler=" "``
+,,,,,,,,,,,,,,
+* Purpose: Set the whitespace filler.
 
 ``justify="left"``
 ,,,,,,,,,,,,,,,,,,
@@ -438,6 +455,13 @@ Optional Arguments
 6. ``menu_object.blank()``
 --------------------------
 * Purpose: Create a blank line.
+
+Optional Arguments
+------------------
+
+``filler = " "``
+,,,,,,,,,,,,,,
+* Purpose: The default filler when you want something to be blank.
 
 7. ``menu_object.selection(text, function)``
 --------------------------------------------
@@ -486,6 +510,8 @@ BORING AND TECHNICAL
 
 Version Notes
 -------------
+17 Jun 2021 v0.5.2: UV: Some bugfixes and tweaks. Added ``filler``, ``no_close_gap``.
+
 12 Jun 2021 v0.5: Unveiling: The first workable version of the program, halfway to the first final form. Not entirely optimized, nor combed over for efficiency, but does what it is supposed to. Also, not all features possible, but enough to be feature-rich. More can be done to give user-friendly options for ends that currently require creative customization.
 
 CURRENT LIMITATIONS
