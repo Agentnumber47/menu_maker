@@ -87,3 +87,38 @@ If something is not working with the menu you made, troubleshoot by enabling one
 3. ``debug='MIXED'`` Do both 1 and 2.
 
 Don't forget to disable it before launch, or you're gonna have a bad time.
+
+API Documentation (Plain English Edition)
+=========================================
+
+This documentation is more technically a quick tutorial to tell you about proper use, what it's capable of, and where to look if you want to do something specific. It's fairly intuitive and lenient, so feel free to try to stretch its limits and forgiveness. We will be breaking down the "Hello World" example.
+
+1. Thinking in Menus
+2. The Components...
+3. ... and Their Uses
+
+1. Thinking in Menus
+--------------------
+
+So you've installed it, now what?
+
+Now you use it! After you learn to, and learning is fun. So it wasn't really now, more like soon. My delete keys don't work, which you'd know if you saw the current state of my code.
+
+Anyway, a menu obviously enables your user to interact with your code. Therefore, it needs to present the information to the user and give them a way to choose how they engage. Menu Maker allows you to sequentially compile your menu as you see it while reducing the hassle in doing so manually. It's a CLI menu engine. Not much, but it serves its purpose.
+
+We'll get more detailed later, but the blueprint - what the program automates - is contained in the ``Menu()`` class that needs to be called first. If the cookie cutter format that can be seen in the 'Hello World' example works for you - it's functional and pretty as-is - then you never have to read beyond this tutorial.
+
+As always, import the library into your code.
+
+.. code-block:: python
+
+    # Import the library
+    from maker import maker
+
+There are only 3 elements that must be included in each implementation. In order:
+
+1. You need to declare a menu. Name it anything. ``anything = maker.Menu()``
+2. You need to offer a selection. ``anything.selection("Selection", selection_function)``
+3. You need to run the menu. ``anything.deploy()``
+
+That's the minimum to run a program (as long as the selection directs to a valid function). What's left is the information you want to present and how you want to present it.
