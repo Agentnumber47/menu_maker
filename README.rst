@@ -91,8 +91,6 @@ Don't forget to disable it before launch, or you're gonna have a bad time.
 API Documentation (Plain English Edition)
 =========================================
 
-If you wish to see the 'hello world' example in action, run the maker as a program.
-
 This documentation is more technically a quick tutorial to tell you about proper use, what it's capable of, and where to look if you want to do something specific. It's fairly intuitive and lenient, so feel free to try to stretch its limits and forgiveness. We will be breaking down the "Hello World" example.
 
 1. Thinking in Menus
