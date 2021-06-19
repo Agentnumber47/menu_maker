@@ -224,7 +224,7 @@ All settings and options are fully and extensively detailed in the Technical Edi
 
 If anything isn't working properly, use the debug mode in ``.deploy()``.
 
-The last essential element is ``.deploy()`` and runs your construction. You have a few ways to set this up different as well. Beyond the ``debug`` setting, you can set it to automatically clear the screen before it attempts to execute the user input with ``auto_clear``. If you don't want Menu Maker to automatically format the blank lines added for whitespace, switch ``manual_format`` to True.
+The last essential element is ``.deploy()`` and runs your construction. You have a few ways to set this up different as well. Beyond the ``debug`` setting, you can set it to automatically clear the screen before it attempts to execute the user input with ``auto_clear``. If you don't want Menu Maker to automatically format the blank lines added for whitespace, switch ``manual_format`` to ``True``.
 
 Lastly, by default, the maker determines the size of the shell window and uses it to format to those specifications. This space is referred to as the 'field.' Technically speaking, the horizontal ``x_field`` is the amount of characters from the leftmost to rightmost, and the vertical ``y_field`` is the amount of lines. If you wish to override the automatic calculation (for instance, if you want to ensure the same display for every field larger than a certain size) this is the place.
 
